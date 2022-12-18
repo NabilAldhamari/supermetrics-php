@@ -87,7 +87,7 @@ class StatisticsController extends Controller
      */
     private function extractDate(array $params): DateTime
     {
-        $month = $params['month'] ?? null;
+        $month = $params['month'] ?? "";
         $date  = DateTime::createFromFormat('F, Y', $month);
 
         if (false === $date) {
